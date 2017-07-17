@@ -13,6 +13,10 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+// database submitters
+var db = require('./db/submitter');
+db.test();
+
 app.get('/', function(request, response) {
   response.render('pages/index', {
 		partial: "test"
