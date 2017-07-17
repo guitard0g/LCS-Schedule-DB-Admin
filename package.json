@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
+  "name": "LCS Schedule Extension Admin Tool",
   "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "description": "admin tool for adding data to the lcs schedule extension repo",
   "engines": {
     "node": "6.11.1"
   },
