@@ -23,6 +23,10 @@ app.get('/', function(request, response) {
 	});
 });
 
+app.post('/testPost', function(request, response) {
+	db.test();
+});	
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
