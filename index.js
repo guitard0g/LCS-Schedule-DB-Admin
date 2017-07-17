@@ -1,8 +1,10 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
+app.use(bodyParser());
 app.use(express.static(__dirname + '/public'));
 app.use('/', express.static(__dirname + '/www')); // redirect root
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
