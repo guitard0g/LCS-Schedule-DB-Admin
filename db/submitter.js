@@ -1,5 +1,4 @@
 // submitter.js
-console.log('------------ HELLO -------------------------');
 
 var getName = function(){
 	return '------------ HELLO -------------------------';
