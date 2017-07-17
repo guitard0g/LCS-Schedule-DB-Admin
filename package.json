@@ -1,5 +1,5 @@
 {
-  "name": "LCS Schedule Extension Admin Tool",
+  "name": "lcs-sched-admin-tool",
   "version": "0.2.6",
   "description": "admin tool for adding data to the lcs schedule extension repo",
   "engines": {
@@ -10,6 +10,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "ejs": "2.5.6",
     "express": "4.15.2"
   },
