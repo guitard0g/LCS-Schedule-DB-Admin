@@ -24,6 +24,8 @@ app.get('/', function(request, response) {
 });
 
 app.post('/testPost', function(request, response) {
+	console.log(request.name_field);
+	console.log(request.team_name);
 	db.test();
 });	
 
