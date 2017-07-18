@@ -16,7 +16,7 @@ var testLog = function(body){
 };
 
 var testAdd = (db, body) => {
-	var ref = db.ref("/NA/matches");	
+	var ref = db.ref("/" + body.region + "/matches");	
 	var date = body.year + '-';
 	if(body.month.length < 2)
 		date = date + '0';
