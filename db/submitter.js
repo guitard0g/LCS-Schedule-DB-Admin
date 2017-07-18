@@ -1,21 +1,6 @@
 // submitter.js
 
-var getName = function(){
-	return '------------ HELLO -------------------------';
-}
-
-var test = function(){
-	console.log(getName());
-}
-var testLog = function(body){
-	console.log(body.day);	
-	console.log(body.month);	
-	console.log(body.year);	
-	console.log(body.team1);	
-	console.log(body.team2);	
-};
-
-var testAdd = (db, body) => {
+var addByRegion = (db, body) => {
 	var ref = db.ref("/" + body.region + "/matches");	
 	var date = body.year + '-';
 	if(body.month.length < 2)
@@ -42,4 +27,4 @@ var testAdd = (db, body) => {
 
 exports.test = test;
 exports.testLog = testLog;
-exports.testAdd = testAdd;
+exports.addByRegion = addByRegion;

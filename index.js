@@ -35,14 +35,9 @@ app.get('/', (request, response) => {
 	});
 });
 
-app.post('/testPost', (request, response) => {
-	console.log(request.body.name_field);
-	dbController.test();
-	response.redirect('/');
-});	
 
 app.post('/addByRegion', (request, response) => {
-	dbController.testAdd(db, request.body);
+	dbController.addByRegion(db, request.body);
 	response.redirect('/');
 });	
 
