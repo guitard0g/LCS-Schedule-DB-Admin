@@ -21,16 +21,9 @@ app.set('view engine', 'ejs');
 
 // database variables
 var dbController = require('./db/submitter');
-//var serviceAccount = require("./db/serviceAccountKey.json");
+var serviceAccount = require("./db/serviceAccountKey.json");
 admin.initializeApp({
-  credential: admin.credential.cert({
-			apiKey: "AIzaSyA1UzOxSBnrWcRAZbz542O3UTr_E5dT5kQ",
-			authDomain: "lcs-schedule-extension.firebaseapp.com",
-			databaseURL: "https://lcs-schedule-extension.firebaseio.com",
-			projectId: "lcs-schedule-extension",
-			storageBucket: "",
-			messagingSenderId: "68674409085"
-		}),
+  credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://lcs-schedule-extension.firebaseio.com"
 });
 var db = admin.database();
