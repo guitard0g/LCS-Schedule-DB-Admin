@@ -31,6 +31,11 @@ app.post('/testPost', function(request, response) {
 	response.redirect('/');
 });	
 
+app.post('/addByRegion', function(request, response) {
+	db.testLog(request.body);
+	response.redirect('/');
+});	
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
