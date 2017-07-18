@@ -22,6 +22,7 @@ db.test();
 app.get('/', function(request, response) {
   response.render('pages/index', {
 		partial: "test"
+		testData: "HENLOOOOOOOOOOOOOOOOOOO"
 	});
 });
 
