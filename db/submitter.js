@@ -24,7 +24,7 @@ var testAdd = (db, body) => {
 	if(body.day.length < 2)
 		date = date + '0';
 	date = date + body.day;
-	ref.set({
+	ref.update({
 		[date]: {
   		matches: body.team1 +'-'+ body.team2 +'-'+ body.time +'-'+ body.victor
   	}
