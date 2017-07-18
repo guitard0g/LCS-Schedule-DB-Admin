@@ -15,5 +15,22 @@ var testLog = function(body){
 	console.log(body.team2);	
 };
 
+var testAdd = (db, body) => {
+	var ref = db.ref("/NA/matches");	
+	var date = body.year + '-';
+	if(db.month.length < 2)
+		date = date + '0';
+	date = date + db.month + '-';
+	if(db.day.length < 2)
+		date = date + '0';
+	date = date + db.day;
+	usersRef.set({
+		[date]: {
+  		matches: body.team1 +'-'+ body.team2 +'-'+ body.time +'-'+ body.victor
+  	}
+	});
+};
+
 exports.test = test;
 exports.testLog = testLog;
+exports.testAdd = testAdd;

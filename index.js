@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var admin = require("firebase-admin");
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
@@ -15,9 +16,15 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-// database submitters
-var db = require('./db/submitter');
-db.test();
+// database variables
+var dbController = require('./db/submitter');
+var serviceAccount = require("./db/serviceAccountKey.json");
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://lcs-schedule-extension.firebaseio.com"
+});
+var db = admin.database();
+
 
 app.get('/', (request, response) => {
   response.render('pages/index', {
@@ -27,12 +34,12 @@ app.get('/', (request, response) => {
 
 app.post('/testPost', (request, response) => {
 	console.log(request.body.name_field);
-	db.test();
+	dbController.test();
 	response.redirect('/');
 });	
 
 app.post('/addByRegion', (request, response) => {
-	db.testLog(request.body);
+	dbController.testAdd(db, request.body);
 	response.redirect('/');
 });	
 
