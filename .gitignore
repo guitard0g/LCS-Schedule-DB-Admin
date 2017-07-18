@@ -1,4 +1,2 @@
 /AdminTool/node_modules
-/AdminTool/.git
-/AdminTool/.gitignore
 /AdminTool/db/serviceAccountKey.json
