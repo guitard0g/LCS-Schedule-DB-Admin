@@ -28,7 +28,6 @@ app.get('/', function(request, response) {
 app.post('/testPost', function(request, response) {
 	console.log(request.body.name_field);
 	db.test();
-	response.json({ testData: "HENLOOOOOOO" });
 	response.redirect('/');
 });	
 
