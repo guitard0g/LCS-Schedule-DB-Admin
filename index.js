@@ -19,24 +19,24 @@ app.set('view engine', 'ejs');
 var db = require('./db/submitter');
 db.test();
 
-app.get('/', function(request, response) {
+app.get('/', (request, response) => {
   response.render('pages/index', {
 		partial: "test",
 	});
 });
 
-app.post('/testPost', function(request, response) {
+app.post('/testPost', (request, response) => {
 	console.log(request.body.name_field);
 	db.test();
 	response.redirect('/');
 });	
 
-app.post('/addByRegion', function(request, response) {
+app.post('/addByRegion', (request, response) => {
 	db.testLog(request.body);
 	response.redirect('/');
 });	
 
-app.listen(app.get('port'), function() {
+app.listen(app.get('port'), () => {
   console.log('Node app is running on port', app.get('port'));
 });
 
