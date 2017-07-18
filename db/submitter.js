@@ -18,12 +18,12 @@ var testLog = function(body){
 var testAdd = (db, body) => {
 	var ref = db.ref("/NA/matches");	
 	var date = body.year + '-';
-	if(db.month.length < 2)
+	if(body.month.length < 2)
 		date = date + '0';
-	date = date + db.month + '-';
-	if(db.day.length < 2)
+	date = date + body.month + '-';
+	if(body.day.length < 2)
 		date = date + '0';
-	date = date + db.day;
+	date = date + body.day;
 	usersRef.set({
 		[date]: {
   		matches: body.team1 +'-'+ body.team2 +'-'+ body.time +'-'+ body.victor
