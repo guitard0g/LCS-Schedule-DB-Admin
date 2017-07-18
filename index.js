@@ -30,7 +30,7 @@ app.post('/testPost', function(request, response) {
 	console.log(request.body.name_field);
 	db.test();
 	response.json({ testData: "HENLOOOOOOO" });
-	response.redirect('/', {
+	response.render('/', {
 		partial: "test",
 		testData: "lol is this gunna work"
 	});
