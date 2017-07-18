@@ -22,7 +22,7 @@ db.test();
 app.get('/', function(request, response) {
   response.render('pages/index', {
 		partial: "test",
-		testData: "HENLOOOOOOOOOOOOOOOOOOO"
+		testData: null
 	});
 });
 
@@ -30,7 +30,10 @@ app.post('/testPost', function(request, response) {
 	console.log(request.body.name_field);
 	db.test();
 	response.json({ testData: "HENLOOOOOOO" });
-	//response.redirect('/');
+	response.redirect('/', {
+		partial: "test",
+		testData: "lol is this gunna work"
+	});
 });	
 
 app.listen(app.get('port'), function() {
