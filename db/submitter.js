@@ -35,7 +35,7 @@ var testAdd = (db, body) => {
   });
 	ref.update({
 		[date]: {
-  		matches: oldData + ";" + body.team1 +'-'+ body.team2 +'-'+ body.time +'-'+ body.victor
+  		matches: oldData + body.team1 +'-'+ body.team2 +'-'+ body.time +'-'+ body.victor + ";"
   	}
 	});
 };
