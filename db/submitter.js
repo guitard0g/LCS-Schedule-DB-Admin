@@ -25,6 +25,4 @@ var addByRegion = (db, body) => {
 	});
 };
 
-exports.test = test;
-exports.testLog = testLog;
 exports.addByRegion = addByRegion;
