@@ -12,3 +12,5 @@ Dockerfile
 docker-compose.yml
 
 db/serviceAccountKey.json
+node_modules/
+db/serviceAccountKey.json
