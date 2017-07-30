@@ -5,6 +5,9 @@ npm-debug.log
 # Local development
 *.env
 *.dev
+*.json
+*.swp
+*.txt
 .DS_Store
 
 # Docker
@@ -13,4 +16,3 @@ docker-compose.yml
 
 db/serviceAccountKey.json
 node_modules/
-db/serviceAccountKey.json
