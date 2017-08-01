@@ -1,3 +1,7 @@
+README
 
+This is a node app that I made to more conveniently add data to my databaseURL
 
-This is the admin tool for my LCS chrome extension. It is an interface for interacting with the database. The database key isn't in here for you to see so don't try to mess with my data :)
+for my Lcs Chrome extension.
+
+![alt](https://github.com/jjrylearn/LCS-Schedule-DB-Admin/blob/master/screenshot.png)
